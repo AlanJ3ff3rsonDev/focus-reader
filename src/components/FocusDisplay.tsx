@@ -8,7 +8,7 @@ import { splitWordByORP } from '@/lib/orpCalculator';
 import { SpeedDial } from './SpeedDial';
 
 export function FocusDisplay() {
-  const { tokens, currentIndex, isPlaying, wordsRead } = useReaderStore();
+  const { tokens, currentIndex, isPlaying } = useReaderStore();
   const { currentToken, progress, isComplete } = useRSVPEngine();
 
   const totalWords = tokens.length;

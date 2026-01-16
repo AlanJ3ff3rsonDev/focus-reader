@@ -81,12 +81,6 @@ export function TextInputPanel() {
     fileInputRef.current?.click();
   };
 
-  const handleStart = () => {
-    if (hasText && !isPlaying) {
-      play();
-    }
-  };
-
   const handleToggle = () => {
     if (isPlaying) {
       pause();
