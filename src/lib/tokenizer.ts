@@ -36,7 +36,7 @@ export function getEstimatedTime(wordCount: number, wpm: number): string {
 
   if (totalMinutes < 1) {
     const seconds = Math.round(totalMinutes * 60);
-    return `${seconds} sec`;
+    return `${seconds} seg`;
   }
 
   if (totalMinutes < 60) {

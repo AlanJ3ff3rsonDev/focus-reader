@@ -33,7 +33,7 @@ export function TextInputPanel() {
 
   const handleFileSelect = useCallback(async (file: File) => {
     if (!isValidPDFFile(file) && !isValidTextFile(file)) {
-      setError('Please use PDF or TXT files.');
+      setError('Por favor, use arquivos PDF ou TXT.');
       return;
     }
 
@@ -44,7 +44,7 @@ export function TextInputPanel() {
       const text = await extractTextFromFile(file);
       setText(text);
     } catch (err) {
-      setError(err instanceof Error ? err.message : 'Failed to read file.');
+      setError(err instanceof Error ? err.message : 'Falha ao ler o arquivo.');
     } finally {
       setIsLoading(false);
     }
@@ -105,9 +105,9 @@ export function TextInputPanel() {
     >
       {/* Header */}
       <div className="mb-6">
-        <span className="label-tag mb-3 block">Paste your text</span>
+        <span className="label-tag mb-3 block">Cole seu texto</span>
         <p className="text-white/50 text-sm leading-relaxed">
-          Paste anything, upload a file, or drag & drop. Then let the words flow at your pace.
+          Cole qualquer texto, envie um arquivo ou arraste e solte. Deixe as palavras fluírem no seu ritmo.
         </p>
       </div>
 
@@ -126,7 +126,7 @@ export function TextInputPanel() {
           ref={textareaRef}
           value={rawText}
           onChange={handleTextChange}
-          placeholder="Paste your text here, or drag & drop a file..."
+          placeholder="Cole seu texto aqui ou arraste e solte um arquivo..."
           className="w-full h-full min-h-[200px] lg:min-h-[280px] p-4 bg-transparent text-white/90 text-sm leading-relaxed rounded-xl focus:outline-none font-mono"
           disabled={isLoading}
         />
@@ -144,7 +144,7 @@ export function TextInputPanel() {
                 <svg className="w-12 h-12 mx-auto mb-3 text-accent-cyan" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12" />
                 </svg>
-                <p className="text-accent-cyan font-medium">Drop your file here</p>
+                <p className="text-accent-cyan font-medium">Solte seu arquivo aqui</p>
               </div>
             </motion.div>
           )}
@@ -161,7 +161,7 @@ export function TextInputPanel() {
             >
               <div className="text-center">
                 <div className="w-10 h-10 border-2 border-accent-cyan/30 border-t-accent-cyan rounded-full animate-spin mx-auto mb-3" />
-                <p className="text-white/60 text-sm">Processing file...</p>
+                <p className="text-white/60 text-sm">Processando arquivo...</p>
               </div>
             </motion.div>
           )}
@@ -185,12 +185,12 @@ export function TextInputPanel() {
       {/* Stats Row */}
       <div className="flex items-center gap-6 mb-6 text-sm">
         <div className="flex items-center gap-2">
-          <span className="text-white/40">Words:</span>
+          <span className="text-white/40">Palavras:</span>
           <span className="text-white font-medium tabular-nums">{wordCount.toLocaleString()}</span>
         </div>
         {hasText && (
           <div className="flex items-center gap-2">
-            <span className="text-white/40">Est. time:</span>
+            <span className="text-white/40">Tempo est.:</span>
             <span className="text-white/70 tabular-nums">{estimatedTime}</span>
           </div>
         )}
@@ -203,7 +203,7 @@ export function TextInputPanel() {
           disabled={!hasText}
           className={`btn-primary ${!hasText ? 'opacity-50 cursor-not-allowed' : ''}`}
         >
-          {isPlaying ? 'Pause' : 'Start'}
+          {isPlaying ? 'Pausar' : 'Iniciar'}
         </button>
 
         <button
@@ -211,7 +211,7 @@ export function TextInputPanel() {
           disabled={tokens.length === 0}
           className={`btn-control ${tokens.length === 0 ? 'opacity-50 cursor-not-allowed' : ''}`}
         >
-          Reset
+          Reiniciar
         </button>
 
         <button
@@ -223,7 +223,7 @@ export function TextInputPanel() {
             <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-8l-4-4m0 0L8 8m4-4v12" />
             </svg>
-            Upload
+            Enviar
           </span>
         </button>
 
@@ -239,11 +239,11 @@ export function TextInputPanel() {
       {/* Keyboard shortcuts hint */}
       <div className="mt-6 pt-4 border-t border-white/[0.06]">
         <p className="text-white/30 text-xs">
-          <span className="text-white/50">Tip:</span> Press{' '}
+          <span className="text-white/50">Dica:</span> Pressione{' '}
           <kbd className="px-1.5 py-0.5 bg-dark-600/50 rounded text-white/50 font-mono text-[10px]">Space</kbd>{' '}
-          to start/pause,{' '}
+          para iniciar/pausar,{' '}
           <kbd className="px-1.5 py-0.5 bg-dark-600/50 rounded text-white/50 font-mono text-[10px]">R</kbd>{' '}
-          to reset
+          para reiniciar
         </p>
       </div>
     </motion.div>

@@ -49,13 +49,13 @@ export function FocusDisplay() {
       <div className="flex items-center justify-between mb-6">
         <div className="flex items-center gap-6">
           <div>
-            <span className="label-tag block mb-1">Words</span>
+            <span className="label-tag block mb-1">Palavras</span>
             <span className="text-xl font-bold text-white tabular-nums">
               {totalWords.toLocaleString()}
             </span>
           </div>
           <div>
-            <span className="label-tag block mb-1">Progress</span>
+            <span className="label-tag block mb-1">Progresso</span>
             <span className="text-xl font-bold text-white tabular-nums">
               {progressPercent}%
             </span>
@@ -72,7 +72,7 @@ export function FocusDisplay() {
               exit={{ opacity: 0, scale: 0.9 }}
             >
               <span className="w-2 h-2 bg-accent-cyan rounded-full animate-pulse" />
-              <span className="text-accent-cyan text-xs font-medium uppercase tracking-wider">Playing</span>
+              <span className="text-accent-cyan text-xs font-medium uppercase tracking-wider">Reproduzindo</span>
             </motion.div>
           )}
         </AnimatePresence>
@@ -101,7 +101,7 @@ export function FocusDisplay() {
                 animate={{ opacity: 1 }}
                 exit={{ opacity: 0 }}
               >
-                {isComplete ? 'Complete!' : 'Ready to read...'}
+                {isComplete ? 'Concluído!' : 'Pronto para ler...'}
               </motion.div>
             ) : (
               <motion.div
@@ -160,12 +160,12 @@ export function FocusDisplay() {
           <span>
             <kbd className="px-1.5 py-0.5 bg-dark-600/50 rounded text-white/50 font-mono text-[10px]">↑</kbd>
             <kbd className="px-1.5 py-0.5 bg-dark-600/50 rounded text-white/50 font-mono text-[10px] ml-1">↓</kbd>
-            <span className="ml-1.5">Speed</span>
+            <span className="ml-1.5">Velocidade</span>
           </span>
           <span>
             <kbd className="px-1.5 py-0.5 bg-dark-600/50 rounded text-white/50 font-mono text-[10px]">←</kbd>
             <kbd className="px-1.5 py-0.5 bg-dark-600/50 rounded text-white/50 font-mono text-[10px] ml-1">→</kbd>
-            <span className="ml-1.5">Rewind/Forward</span>
+            <span className="ml-1.5">Voltar/Avançar</span>
           </span>
         </div>
       </div>

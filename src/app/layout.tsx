@@ -15,9 +15,9 @@ const geistMono = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Focus Reader | RSVP Speed Reading",
-  description: "Train your reading speed with RSVP technology. Paste any text and let words flow at your pace.",
-  keywords: ["speed reading", "RSVP", "focus", "reading trainer", "ORP"],
+  title: "Focus Reader | Leitura Dinâmica RSVP",
+  description: "Treine sua velocidade de leitura com tecnologia RSVP. Cole qualquer texto e deixe as palavras fluírem no seu ritmo.",
+  keywords: ["leitura dinâmica", "RSVP", "foco", "treino de leitura", "ORP"],
 };
 
 export default function RootLayout({
@@ -26,7 +26,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="dark">
+    <html lang="pt-BR" className="dark">
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased bg-dark-950 text-white min-h-screen`}
       >

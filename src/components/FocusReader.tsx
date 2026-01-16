@@ -15,12 +15,12 @@ export function FocusReader() {
         <div className="max-w-7xl mx-auto">
           <div className="flex items-start justify-between">
             <div>
-              <span className="label-tag mb-2 block">Reading Comprehension Trainer</span>
+              <span className="label-tag mb-2 block">Treinador de Leitura Dinâmica</span>
               <h1 className="text-3xl lg:text-4xl font-bold text-white tracking-tight">
                 Focus Reader
               </h1>
               <p className="mt-2 text-white/50 text-sm lg:text-base max-w-md">
-                Paste anything, lock your gaze on the red letter, and let the words flow at your pace.
+                Cole qualquer texto, fixe o olhar na letra vermelha e deixe as palavras fluírem no seu ritmo.
               </p>
             </div>
 
@@ -51,8 +51,8 @@ export function FocusReader() {
       {/* Footer */}
       <footer className="relative z-10 px-6 lg:px-12 py-4 border-t border-white/[0.04]">
         <div className="max-w-7xl mx-auto flex items-center justify-between text-xs text-white/30">
-          <span>Your text is processed locally in your browser</span>
-          <span className="hidden sm:inline">Built with RSVP technology</span>
+          <span>Seu texto é processado localmente no seu navegador</span>
+          <span className="hidden sm:inline">Desenvolvido com tecnologia RSVP</span>
         </div>
       </footer>
     </div>

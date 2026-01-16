@@ -37,7 +37,7 @@ export async function extractTextFromPDF(file: File): Promise<string> {
       .trim();
   } catch (error) {
     console.error('Error parsing PDF:', error);
-    throw new Error('Failed to parse PDF file. Please try a different file.');
+    throw new Error('Falha ao processar o PDF. Por favor, tente outro arquivo.');
   }
 }
 
@@ -69,5 +69,5 @@ export async function extractTextFromFile(file: File): Promise<string> {
     return file.text();
   }
 
-  throw new Error('Unsupported file type. Please use PDF or TXT files.');
+  throw new Error('Tipo de arquivo não suportado. Use arquivos PDF ou TXT.');
 }

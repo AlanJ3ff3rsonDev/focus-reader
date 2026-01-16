@@ -165,12 +165,12 @@ export function SpeedDial() {
 
       {/* WPM Label */}
       <div className="mt-6 text-center">
-        <span className="label-tag block mb-1">Speed</span>
+        <span className="label-tag block mb-1">Velocidade</span>
         <div className="flex items-baseline justify-center gap-1">
           <span className="text-3xl lg:text-4xl font-bold text-white tabular-nums tracking-tight">
             {wpm}
           </span>
-          <span className="text-white/40 text-sm font-medium">WPM</span>
+          <span className="text-white/40 text-sm font-medium">PPM</span>
         </div>
       </div>
     </div>
